@@ -65,4 +65,18 @@ document.getElementById('reloadBtn').addEventListener('click', () => {
   });
 });
 
+document.getElementById('collapseBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('collapseBtn');
+  btn.textContent = 'Collapsing…';
+  btn.disabled = true;
+
+  const groups = await chrome.tabGroups.query({});
+  await Promise.all(groups.map(g => chrome.tabGroups.update(g.id, { collapsed: true })));
+
+  btn.textContent = 'Collapse All';
+  btn.disabled = false;
+  document.getElementById('status').textContent =
+    `Collapsed ${groups.length} group(s) at ${fmtTime(Date.now())}`;
+});
+
 refresh();

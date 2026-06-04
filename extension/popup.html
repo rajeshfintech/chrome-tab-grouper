@@ -47,12 +47,13 @@
       cursor: pointer;
       font-size: 13px;
       font-weight: 500;
+      white-space: nowrap;
     }
     button + button { margin-top: 6px; }
-    button.secondary { background: #fff; color: #1a73e8; border: 1px solid #dadce0; }
-    button.secondary:hover { background: #f1f3f4; }
     button:hover { background: #1557b0; }
     button:disabled { background: #9aa0a6; cursor: default; color: #fff; border-color: transparent; }
+    button.secondary { background: #fff; color: #1a73e8; border: 1px solid #dadce0; }
+    button.secondary:hover { background: #f1f3f4; }
     #status { color: #5f6368; font-size: 11px; margin-top: 8px; text-align: center; }
   </style>
 </head>
@@ -66,6 +67,7 @@
 
   <button id="groupAllBtn">Group all open tabs</button>
   <button id="reloadBtn" class="secondary">Reload Config</button>
+  <button id="collapseBtn" class="secondary">Collapse All</button>
   <div id="status"></div>
 
   <script src="popup.js"></script>
