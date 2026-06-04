@@ -259,6 +259,13 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   }
 });
 
+chrome.commands.onCommand.addListener(async (command) => {
+  if (command === 'collapse-all-groups') {
+    const groups = await chrome.tabGroups.query({});
+    await Promise.all(groups.map(g => chrome.tabGroups.update(g.id, { collapsed: true })));
+  }
+});
+
 chrome.runtime.onInstalled.addListener(() => { processAllTabs(); });
 chrome.runtime.onStartup.addListener(() => { processAllTabs(); });
 
