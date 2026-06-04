@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tab Auto Grouper",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Automatically groups tabs based on URL rules defined in config.json",
   "permissions": [
     "tabs",
@@ -22,8 +22,7 @@
   "commands": {
     "collapse-all-groups": {
       "suggested_key": {
-        "mac": "Command+Shift+G",
-        "default": "Ctrl+Shift+G"
+        "default": "Ctrl+Shift+R"
       },
       "description": "Collapse all tab groups"
     }
