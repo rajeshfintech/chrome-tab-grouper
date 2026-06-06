@@ -1,0 +1,20 @@
+{
+  "idle_minutes": 10,
+  "patterns": [
+    { "name": "AWS",          "match": "signin.aws.amazon.com" },
+    { "name": "Google",       "match": "accounts.google.com/signin" },
+    { "name": "Google",       "match": "accounts.google.com/v3/signin" },
+    { "name": "GitHub",       "match": "github.com/login" },
+    { "name": "GitHub",       "match": "github.com/session" },
+    { "name": "Microsoft",    "match": "login.microsoftonline.com" },
+    { "name": "Microsoft",    "match": "login.live.com" },
+    { "name": "LinkedIn",     "match": "linkedin.com/login" },
+    { "name": "Twitter/X",    "match": "x.com/i/flow/login" },
+    { "name": "Twitter",      "match": "twitter.com/login" },
+    { "name": "Slack",        "match": "slack.com/signin" },
+    { "name": "Okta",         "match": ".okta.com/login" },
+    { "name": "GitLab",       "match": "gitlab.com/users/sign_in" },
+    { "name": "Atlassian",    "match": "id.atlassian.com/login" },
+    { "name": "Atlassian",    "match": "atlassian.com/login" }
+  ]
+}
